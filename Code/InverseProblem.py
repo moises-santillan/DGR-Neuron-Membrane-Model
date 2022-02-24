@@ -27,7 +27,7 @@ for dir in directories:
     pars = []
     for file in files:
         data = np.loadtxt(pwd + dir + '/' + file)
-        t, f, x = data[::300,0]/1000, data[::300,1], data[::300,2]
+        t, f, x = data[::200,0]/1000, data[::200,1], data[::200,2]
         i_max = f.argmax()
         t, f, x = t[:i_max], f[:i_max], x[:i_max]
         x = x[0] - x
